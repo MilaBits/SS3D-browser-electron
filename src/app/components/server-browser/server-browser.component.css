@@ -1,0 +1,50 @@
+.server-browser-root {
+    height: 100%;
+
+}
+
+.header {
+    margin: 10px;
+    margin-left: 15px;
+}
+
+.server-browser-top {
+    background-color: #1E4684;
+    color: white;
+    height: 60px;
+}
+
+.server-browser-bottom {
+    height: calc(100% - 60px);
+}
+
+.server-list {
+    height: calc(100% - 20px);
+    margin: 10px;
+
+    overflow-y: auto;
+
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding-inline-start: 0;
+
+    justify-content: flex-start;
+  }
+
+  li {
+    display: inline-block;
+    height: 100px;
+    text-align: center;
+  }
+
+  app-server-browser-item:nth-child(odd){
+      background-color: rgba(0, 0, 0, 0.1);
+  }
