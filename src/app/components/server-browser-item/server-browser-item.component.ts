@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {GameServerData} from '../../../models/GameServerData'
 
 @Component({
   selector: 'app-server-browser-item',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServerBrowserItemComponent implements OnInit {
 
-  constructor() { }
+  @Input() gameServerData: GameServerData;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

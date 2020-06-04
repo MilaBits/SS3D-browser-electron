@@ -1,0 +1,33 @@
+.message {
+  position:fixed;
+  bottom: 20px; /* has to be around the height of the bar or more. */
+  left: 30px;
+  right: 30px;
+  display: block;
+  z-index: 99999;
+  box-sizing: border-box;
+  width: calc(100% - 60px);
+  padding: 10px;
+  background-color: #c0392b;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+  transition: top 1s;
+}
+
+button {
+  border-style: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 20px;
+  float: right;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}

@@ -1,13 +1,59 @@
 .server-item {
-    display: flex;
+  display: flex;
+  height: 90px;
+  border: #363d4e 1px solid;
+  color: whitesmoke;
 }
 
 .server-image {
-    height: 100px;
-    width: 100px;
-    background-color: rgb(59, 59, 59);
+  height: 90px;
+  width: 90px;
+  background: #363d4e;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.server-title {
+  margin: 5px 0px -5px 0px;
+  display: inline-block;
+}
+
+.server-address {
+  float: right;
+  display: inline;
+  color: #4e4e4e;
+  margin: 10px 5px 0px 0px;
+
+}
+
+.server-game {
+  line-height: 90px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.server-tagline {
+  margin: 0px;
+  padding-left: 10px;
+  min-height: 20px;
+  font-style: italic;
+}
+
+.server-players {
+  float: right;
+  display: inline;
+  margin: 10px 5px 0px 0px;
+
+  font-weight: bolder;
+}
+
+.server-info {
+  float: right;
+  display: inline;
+  margin: 16px 5px;
+  font-weight: bolder;
 }
 
 .server-text {
-    flex: 1;
+  flex: 1;
 }

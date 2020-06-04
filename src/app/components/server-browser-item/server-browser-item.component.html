@@ -1,8 +1,13 @@
-<li class="server-item">
-    <div class="server-image">
-    </div>
-    <div class="server-text">
-        <h2>test server</h2>
-        <p>beep boop test text</p>
-    </div>
-</li>
+<div class="server-item">
+  <div class="server-image">
+    <div class="server-game">{{gameServerData.game}}</div>
+  </div>
+  <div class="server-text">
+    <span class="server-players"><span style="color:limegreen;">{{gameServerData.players}}</span> / {{gameServerData.maxPlayers}}</span>
+    <span class="server-address">{{gameServerData.address}}:{{gameServerData.gamePort}}</span>
+    <h2 class="server-title">{{gameServerData.name}}</h2>
+    <p class="server-tagline">{{gameServerData.tagLine}}</p>
+    <span class="server-info">Codebase: {{gameServerData.branch}} {{gameServerData.version}}</span>
+    <p class="server-gamemode">Gamemode: <b>{{gameServerData.gamemode}}</b> on <b>{{gameServerData.map}}</b></p>
+  </div>
+</div>

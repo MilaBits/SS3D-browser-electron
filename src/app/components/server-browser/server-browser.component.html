@@ -1,12 +1,20 @@
 <div class="server-browser-root background-base">
-    <div class="server-browser-top">
-        <h1 class="header">Server Browser</h1>
+  <div class="server-browser-top">
+    <h1 class="header">Server Browser</h1>
+  </div>
+  <div class="server-browser-bottom">
+    <div *ngIf="serversService.servers.length < 1" style="text-align: center; padding-top: 15px">{{serversService.errorMessage}}</div>
+    <div class="server-list">
+      <ul>
+
+        <li *ngFor="let server of serversService.servers">
+          <app-server-browser-item [gameServerData]="server"></app-server-browser-item>
+        </li>
+
+      </ul>
     </div>
-    <div class="server-browser-bottom">
-        <div class="server-list">
-            <ul>
-                <app-server-browser-item *ngFor="let number of [0,1,2,3,4,5,6,7,8]"></app-server-browser-item>
-            </ul>
-        </div>
-    </div>
+  </div>
+  <app-server-details [gameServerData]="selectedServer">
+
+  </app-server-details>
 </div>

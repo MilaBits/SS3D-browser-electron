@@ -16,20 +16,29 @@ body {
 html {
   background-image: url(./assets/stars.jpg);
 
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container {
-  height: 100%;
+  height: calc(100% - 20px);
   display: flex;
   justify-content: center;
+  margin: 10px;
+  background: black;
 
   .title {
     color: white;
-    margin: 5;
+    margin: 5px;
     padding: 50px 20px;
   }
 }
 
+.header {
+  text-align: center;
+  padding-top: 10px;
+  margin: 0;
+}
+
 .background-base {
-  background-color: darkgray;
+  background-color: #5f6472;
 }
