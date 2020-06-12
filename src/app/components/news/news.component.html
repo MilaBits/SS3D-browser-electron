@@ -1,12 +1,14 @@
 <div class="news-root background-base">
-    <div class="news-top">
+  <div class="news-top">
     <h1 class="header">News</h1>
+  </div>
+  <div class="news-bottom">
+    <div class="news-list">
+      <ul>
+        <li *ngFor="let newsItem of newsService.news">
+          <app-news-item [news]="newsItem"></app-news-item>
+        </li>
+      </ul>
     </div>
-    <div class="news-bottom">
-        <div class="news-list">
-            <ul>
-                <app-news-item *ngFor="let number of [0,1,2,3,4,5]"></app-news-item>
-            </ul>
-        </div>
-    </div>
+  </div>
 </div>

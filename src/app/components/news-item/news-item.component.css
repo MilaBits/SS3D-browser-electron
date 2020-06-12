@@ -1,27 +1,30 @@
 .row {
-    display: flex;
+  display: flex;
 
 }
 
 .news-image {
-    margin: 10px;
-    height: 100px;
-    width: 100px;
-    background-color: rgb(59, 59, 59);
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(59, 59, 59);
 }
 
 .news-text {
-    margin: 10px;
-    flex: 1;
+  margin: 10px;
+  flex: 1;
 }
 
-.news-title {}
+.news-title {
+}
 
-.news-date {}
+.news-date {
+  float:right;
+}
 
 .news-item-root {
-    background-color: rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+  text-align: left;
+  height: 200px;
+
+  background-color: rgba(0, 0, 0, 0.1);
 }

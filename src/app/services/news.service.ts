@@ -4,25 +4,26 @@ import {Observable, of} from "rxjs";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {MessageService} from "./message.service";
 import {catchError} from "rxjs/operators";
+import {News} from "../../models/News";
 
 @Injectable({
   providedIn: 'root'
 })
-export class ServersService {
-//ss3dsb.gateway.kn01.fhict.nl
-  private serversUrl = 'http://localhost:5000/serverlist';
+export class NewsService {
+
+  private newsUrl = 'http://localhost:5000/news';
 
   constructor(private http: HttpClient, private messageService: MessageService) {
-    this.getServers().subscribe(data => this.servers = data);
-    console.log(this.servers);
+    this.getNews().subscribe(data => this.news = data);
+    console.log(this.news);
   }
 
-  servers: GameServerData[];
+  news: News[];
   errorMessage: string;
 
-  getServers(): Observable<GameServerData[]> {
-    return this.http.get<GameServerData[]>(this.serversUrl)
-      .pipe(catchError(this.handleError<GameServerData[]>('getServers', [])));
+  getNews(): Observable<News[]> {
+    return this.http.get<News[]>(this.newsUrl)
+      .pipe(catchError(this.handleError<News[]>('getNews', [])));
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
@@ -36,7 +37,7 @@ export class ServersService {
 
       if (error.constructor == HttpErrorResponse) {
         if (error.status == 0){
-          this.errorMessage = "Unable to fetch servers. No Response from server";
+          this.errorMessage = "Unable to fetch news. No Response from server";
         }
       }
 

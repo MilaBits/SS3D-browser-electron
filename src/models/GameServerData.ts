@@ -1,4 +1,5 @@
 export interface GameServerData {
+    id: number, // id of server in database
     name: string, // Name of server.
     tagLine: string, // Optional. Custom text appearing below name.
 
