@@ -15,12 +15,9 @@ jobs:
   analyze:
     runs-on: self-hosted
     steps:
-      - name: Get source code
       - uses: actions/checkout@v2
-      - name: Launch sonar-scanner
-      - run: docker run sonarsource/sonar-scanner-cli
-      - name: use sonar-scanner
-      - run: /home/runner/_work/SS3D-browser-electron/SS3D-browser-electron/ sonar-scanner
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v1.3
 #   build:
 #     # The type of runner that the job will run on
 #     runs-on: self-hosted
