@@ -9,8 +9,9 @@ import {catchError} from "rxjs/operators";
   providedIn: 'root'
 })
 export class ServersService {
-//ss3dsb.gateway.kn01.fhict.nl
-  private serversUrl = 'http://localhost:5000/serverlist';
+  //http://ss3dsb.gateway.kn01.fhict.nl/serverlist
+  //http://localhost:5000/serverlist
+  private serversUrl = 'http://ss3dsb.gateway.kn01.fhict.nl/serverlist';
 
   constructor(private http: HttpClient, private messageService: MessageService) {
     this.getServers().subscribe(data => this.servers = data);

@@ -11,7 +11,9 @@ import {News} from "../../models/News";
 })
 export class NewsService {
 
-  private newsUrl = 'http://localhost:5000/news';
+  //http://localhost:5000/news
+  //http://ss3dsb.news.kn01.fhict.nl/news
+  private newsUrl = 'http://ss3dsb.news.kn01.fhict.nl/news';
 
   constructor(private http: HttpClient, private messageService: MessageService) {
     this.getNews().subscribe(data => this.news = data);
