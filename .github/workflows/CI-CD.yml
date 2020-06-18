@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: SonarCloud Scan
-        run: sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=18e28b05a80b8a23bbfa687d899f327d711a31fb
+        run: sonar-scanner -Dsonar.login=18e28b05a80b8a23bbfa687d899f327d711a31fb --debug
 #   build:
 #     # The type of runner that the job will run on
 #     runs-on: self-hosted
