@@ -19,7 +19,7 @@ jobs:
       - name: where am i?
         run: cd
       - name: SonarCloud Scan
-        run: $GITHUB_WORKSPACE sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=18e28b05a80b8a23bbfa687d899f327d711a31fb
+        run: sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=18e28b05a80b8a23bbfa687d899f327d711a31fb
 #   build:
 #     # The type of runner that the job will run on
 #     runs-on: self-hosted
