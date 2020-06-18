@@ -15,6 +15,7 @@ jobs:
   analyze:
     runs-on: self-hosted
     steps:
+      - name: Get source code
       - uses: actions/checkout@v2
       - name: Launch sonar-scanner
       - run: docker run sonarsource/sonar-scanner-cli
