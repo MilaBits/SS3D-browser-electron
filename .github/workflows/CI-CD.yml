@@ -17,13 +17,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v1.3
-        with:
-          projectBaseDir: /home/runner/_work/SS3D-browser-electron/SS3D-browser-electron/
-          sources: ./src/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#         uses: SonarSource/sonarcloud-github-action@v1.3
+#         with:
+#           projectBaseDir: /home/runner/_work/SS3D-browser-electron/SS3D-browser-electron/
+#           sources: ./src/*
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - run: docker run sonarsource/sonar-scanner-cli
       - run: /home/runner/_work/SS3D-browser-electron/SS3D-browser-electron/ sonar-scanner
 #   build:
 #     # The type of runner that the job will run on
